@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            align: center;
+            width: 400px;
+            height: 400px;
+            background: blue;
+            transition: width 0.5s, height 0.5s, transform 0.5s, border-radius 0.5s;
+            transition-delay: 0s;
+
+            
+        }
+        #div1 {
+            transition-timing-function: linear;
+        } */
+
+        #div2 {
+            transition-timing-function: ease;
+
+        }
+
+        /* #div3 {
+            transition-timing-function: ease-in;
+        } */
+
+        /* #div4 {
+            transition-timing-function: ease-out;
+        }
+
+        #div5 {
+            transition-timing-function: ease-in-out;
+        } */
+
+        div:hover {
+            width: 300px;
+            background-color: red;
+            height: 300px;
+            /* transform: rotate(99999999deg); */
+            border-radius: 50%;
+            transform: skewX(13deg)
+            
+            
+        }
+         /* Centering properties */
+    </style>
+</head>
+
+<body>
+
+
+    <div id="div1"> </div><br>
+    <div id="div2" align="center" align="">try</div><br>
+    
+</body>
+
+</html>

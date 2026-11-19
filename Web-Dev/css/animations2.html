@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Website</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #080816;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    animation: appear 1.5s ease forwards;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 90px);
+    font-weight: 900;
+    background: linear-gradient(90deg, #00f5ff, #a855f7, #ff4ecd);
+    background-size: 300%;
+    color: transparent;
+    background-clip: text;
+    animation: gradient 5s infinite, float 3s ease-in-out infinite;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #aaa;
+    letter-spacing: 3px;
+    animation: fade 2s ease forwards;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 40px;
+    border: 1px solid #a855f7;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 15px #a855f755;
+}
+
+button:hover {
+    background: #a855f7;
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #a855f7;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: move 8s infinite alternate ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 250px;
+    height: 250px;
+    background: #6d28d9;
+    top: 10%;
+    left: 10%;
+    opacity: 0.35;
+}
+
+.circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    background: #0891b2;
+    bottom: 5%;
+    right: 10%;
+    opacity: 0.3;
+    animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    background: #db2777;
+    top: 60%;
+    left: 25%;
+    opacity: 0.25;
+    animation-delay: 1s;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0%; }
+    50% { background-position: 100%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes move {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(80px, -60px) scale(1.3); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+    <h1>BEYOND LIMITS</h1>
+    <p>EXPERIENCE THE FUTURE</p>
+    <button>EXPLORE NOW</button>
+</div>
+
+</body>
+</html>
